@@ -32,7 +32,6 @@ body {
   padding: 0 15px;
 }
 
-/* Шапка */
 .header-inner {
   padding: 12px 15px;
   display: flex;
@@ -69,7 +68,6 @@ body {
   order: 1;
 }
 
-/* Меню: на смартфоне — вертикальный список */
 #menu {
   order: 2;
   flex-basis: 100%;
@@ -93,7 +91,6 @@ body {
   background: rgba(255, 255, 255, 0.7);
 }
 
-/* Основной контент */
 #main .container {
   display: flex;
   flex-direction: column;
@@ -110,7 +107,6 @@ body {
   border-radius: 6px;
 }
 
-/* На смартфоне таблица визуально выше списка ссылок */
 #section-table {
   order: -1;
 }
@@ -123,7 +119,6 @@ body {
   order: 1;
 }
 
-/* Таблица */
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
@@ -165,7 +160,6 @@ body {
   color: #555;
 }
 
-/* Форма */
 form p {
   margin: 0 0 14px;
 }
@@ -226,7 +220,6 @@ button:hover {
   padding: 18px 15px;
 }
 
-/* ===== Media Query: планшеты и десктопы ===== */
 
 @media (min-width: 700px) {
   .header-inner {
@@ -266,7 +259,6 @@ button:hover {
     background: rgba(255, 255, 255, 0.55);
   }
 
-  /* На планшетах и десктопах возвращаем обычный порядок: список, таблица, форма */
   #section-table {
     order: 0;
   }
