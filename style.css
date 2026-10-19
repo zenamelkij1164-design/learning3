@@ -4,270 +4,235 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  color: #222;
-  background: #fff;
-}
-
-#header,
-#footer {
-  width: 100%;
-  background: #9cc3e5;
-}
-
-#header {
-  border-bottom: 1px solid #6d9bc3;
-}
-
-#footer {
-  border-top: 1px solid #6d9bc3;
-  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
 .container {
-  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+header#header, footer#footer {
+  width: 100%;
+  background-color: #0055a4;
+  color: white;
+}
+
 .header-inner {
-  padding: 12px 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
-}
-
-.logo {
-  width: 72px;
-  height: 72px;
-  flex: 0 0 72px;
-  border: 2px solid #2f5d8a;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: #2f5d8a;
-}
-
-.header-content {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  padding: 15px 0;
+  border: 2px solid #0055a4;
   gap: 10px;
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.logo img {
+  max-height: 60px;
+  width: auto;
+}
+
 .site-title {
-  font-size: 24px;
-  font-weight: 700;
-  order: 1;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 #menu {
-  order: 2;
-  flex-basis: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 #menu a {
-  display: block;
-  padding: 6px 8px;
-  border-radius: 4px;
-  color: #123;
+  color: white;
   text-decoration: none;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  padding: 10px 0;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 
-#menu a:hover {
-  background: rgba(255, 255, 255, 0.7);
+main#main {
+  padding: 20px 0;
 }
 
-#main .container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
-.content-block,
-.block {
-  margin-bottom: 30px;
+.content-block, .block {
+  background-color: white;
   padding: 20px;
-  background: #eaf2fb;
-  border: 1px solid #b8d4ee;
-  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 2px solid #0055a4;
 }
 
-#section-table {
-  order: -1;
+.content-block h2, .block h2 {
+  margin-top: 0;
+  color: #0055a4;
 }
 
-#list {
-  order: 0;
+#list ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-#form {
-  order: 1;
+#list li {
+  margin-bottom: 10px;
+}
+
+#list img {
+  max-width: 100%;
+  height: auto;
 }
 
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  margin-bottom: 15px;
 }
 
-.schedule-table th,
-.schedule-table td {
-  border: 1px solid #7aa7cf;
-  padding: 8px 10px;
-  text-align: left;
-  vertical-align: top;
+.schedule-table th, .schedule-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
 }
 
 .schedule-table thead th {
-  background: #c9def1;
-}
-
-.schedule-table tbody tr:nth-child(odd) {
-  background: #f5f9fd;
+  background-color: #0055a4;
+  color: white;
 }
 
 .schedule-table tbody tr:nth-child(even) {
-  background: #e3eef9;
+  background-color: #f2f2f2;
 }
 
-.split {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.schedule-table .split {
+  text-align: left;
+  padding: 0;
 }
 
-.split .top {
-  font-weight: 600;
+.schedule-table .split div {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
 }
 
-.split .bottom {
-  font-size: 0.9em;
-  color: #555;
+.schedule-table .split div:last-child {
+  border-bottom: none;
 }
 
 form p {
-  margin: 0 0 14px;
+  margin-bottom: 15px;
 }
 
-input,
-select,
-textarea,
-button {
-  font: inherit;
+label {
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="date"],
-select,
-textarea {
+textarea,
+select {
   width: 100%;
-  max-width: 500px;
   padding: 8px;
-  border: 1px solid #9bb8d6;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background: #fff;
 }
 
 fieldset {
-  max-width: 500px;
-  margin: 0 0 14px;
-  padding: 10px 12px;
-  border: 1px solid #9bb8d6;
-  border-radius: 4px;
-  background: #fff;
-}
-
-fieldset label {
-  margin-right: 15px;
-}
-
-textarea {
-  resize: vertical;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 button {
-  padding: 10px 18px;
-  border: 0;
+  padding: 10px 20px;
+  background-color: #0055a4;
+  color: white;
+  border: none;
   border-radius: 4px;
-  background: #2f5d8a;
-  color: #fff;
   cursor: pointer;
 }
 
 button:hover {
-  background: #244a70;
+  background-color: #004488;
 }
 
-/* Футер */
-#footer .container {
-  padding: 18px 15px;
+footer#footer {
+  text-align: center;
+  padding: 15px 0;
+  border: 2px solid #0055a4;
 }
 
+/* Mobile First: базовые стили для смартфонов (портрет) */
+main {
+  display: flex;
+  flex-direction: column;
+}
 
-@media (min-width: 700px) {
+#table {
+  order: -1;
+}
+
+/* Планшеты и выше */
+@media (min-width: 768px) {
   .header-inner {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
   }
 
   .header-content {
-    display: contents;
-  }
-
-  .logo {
-    order: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
   }
 
   .site-title {
-    order: 2;
-    font-size: 28px;
+    text-align: left;
   }
 
   #menu {
-    order: 3;
     flex-direction: row;
-    flex-basis: auto;
-    margin-top: 0;
-    margin-left: auto;
-    gap: 16px;
+    gap: 20px;
+    width: auto;
+    text-align: left;
   }
 
   #menu a {
-    background: transparent;
-    padding: 6px 8px;
+    padding: 5px 10px;
+    border: none;
   }
 
-  #menu a:hover {
-    background: rgba(255, 255, 255, 0.55);
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
-  #section-table {
+  #list, #table, #form {
+    flex: 1 1 300px;
+  }
+
+  #table {
     order: 0;
   }
+}
 
-  #list {
-    order: 0;
-  }
-
-  #form {
-    order: 0;
+/* Десктоп */
+@media (min-width: 960px) {
+  .container {
+    padding: 0;
   }
 }
