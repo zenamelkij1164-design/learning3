@@ -3,27 +3,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Задание 2</title>
+  <title>Задание 3</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header id="header">
     <div class="container header-inner">
-      <div class="logo">Логотип</div>
+      <div class="logo"><img src="https://avatars.mds.yandex.net/i?id=a283abc3bae72ce7ab9987b6dee9ae04d1fe76c2-10702414-images-thumbs&n=13" alt="Логотип"></div>
       <div class="header-content">
+        <div class="site-title">Задание 3</div>
         <nav id="menu">
           <a href="#list">Список гиперссылок</a>
           <a href="#table">Расписание ПМ21/2</a>
           <a href="#form">Форма</a>
         </nav>
-        <div class="site-title">Задание 2</div>
       </div>
     </div>
   </header>
 
   <main id="main">
     <div class="container">
+
+      <section id="table" class="block">
+        <h2>Расписание ПМ21/2</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Пара</th>
+                    <th>Понедельник</th>
+                    <th>Вторник</th>
+                    <th>Среда</th>
+                    <th>Четверг</th>
+                    <th>Пятница</th>
+                    <th>Суббота</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="6">КСРС</td>
+                    <td class="split">
+                        <div class="top">Комп. сети лаб</div>
+                        <div class="bottom"></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Матан лекция</td>
+                    <td>Матан лаб</td>
+                    <td></td>
+                    <td>Иностранный яз лаб</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td>Диффуры лаб</td>
+                    <td>Диффуры лекция</td>
+                    <td>Физра</td>
+                    <td>Матан лаб</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="split">
+                        <div class="top">Экономика лекция</div>
+                        <div class="bottom">Экономика п/з</div>
+                    </td>
+                    <td>WEB лаб</td>
+                    <td>Физика лекция</td>
+                    <td class="split">
+                        <div class="top">Комп. сети лекция</div>
+                        <div class="bottom">Матан лаб</div>
+                    </td>
+                    <td>ООП лек</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>WEB лекция</td>
+                    <td>ООП лаб>
+                    <td></td>
+                    <td>Физика п/з</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Матан лаб</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
 
       <section id="list" class="content-block">
         <h2>Список гиперссылок</h2>
@@ -33,14 +110,14 @@
           <li><a href="https://kubsu.ru">2) Абсолютная гиперссылка на kubsu.ru (https)</a></li>
           <li>
             <a href="https://kubsu.ru">
-              <img src="https://avatars.mds.yandex.net/i?id=a283abc3bae72ce7ab9987b6dee9ae04d1fe76c2-10702414-images-thumbs&amp;n=13"
+              <img src="https://avatars.mds.yandex.net/i?id=a283abc3bae72ce7ab9987b6dee9ae04d1fe76c2-10702414-images-thumbs&n=13"
                    alt="3) Ссылка-изображение на kubsu.ru">
             </a>
           </li>
           <li><a href="/index.php">4) Сокращённая ссылка на внутреннюю страницу</a></li>
           <li><a href="/">5) Сокращённая ссылка на главную страницу</a></li>
           <li><a href="#form">6) Ссылка на фрагмент текущей страницы</a></li>
-          <li><a href="https://kubsu.ru/?param1=one&amp;param2=two&amp;param3=three">7) Ссылка с тремя параметрами в URL</a></li>
+          <li><a href="https://kubsu.ru/?param1=one&param2=two&param3=three">7) Ссылка с тремя параметрами в URL</a></li>
           <li><a href="https://kubsu.ru/?id=42">8) Ссылка с параметром id в URL</a></li>
           <li><a href="page.html">9) Относительная ссылка на страницу в текущем каталоге</a></li>
           <li><a href="about/index.html">10) Относительная ссылка на страницу в каталоге about</a></li>
@@ -50,7 +127,7 @@
           <li><a href="https://en.wikipedia.org/wiki/HTML#History">14) Ссылка на фрагмент страницы стороннего сайта</a></li>
           <li>
             <p>15) Карта ссылок: прямоугольная и круглая области картинки</p>
-            <img src="https://avatars.mds.yandex.net/i?id=a283abc3bae72ce7ab9987b6dee9ae04d1fe76c2-10702414-images-thumbs&amp;n=13"
+            <img src="https://avatars.mds.yandex.net/i?id=a283abc3bae72ce7ab9987b6dee9ae04d1fe76c2-10702414-images-thumbs&n=13"
                  alt="Картинка с картой ссылок" width="300" height="200" usemap="#imagemap">
             <map name="imagemap">
               <area shape="rect" coords="0,0,150,200" href="https://kubsu.ru/"
@@ -82,82 +159,6 @@
         </ul>
       </section>
 
-      <section class="block" id="section-table">
-    <h2>Расписание ПМ21/2</h2>
-    <table class="schedule-table">
-        <thead>
-            <tr>
-                <th>Пара</th>
-                <th>Понедельник</th>
-                <th>Вторник</th>
-                <th>Среда</th>
-                <th>Четверг</th>
-                <th>Пятница</th>
-                <th>Суббота</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
-                <td rowspan="6">КСРС</td>
-                <td class="split">
-                    <div class="top">Комп. сети лаб</div>
-                    <div class="bottom"></div>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td></td>
-                <td>Матан лекция</td>
-                <td>Матан лаб</td>
-                <td></td>
-                <td>Иностранный яз лаб</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td></td>
-                <td>Диффуры лаб</td>
-                <td>Диффуры лекция</td>
-                <td>Физра</td>
-                <td>Матан лаб</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td class="split">
-                    <div class="top">Экономика лекция</div>
-                    <div class="bottom">Экономика п/з</div>
-                </td>
-                <td>WEB лаб</td>
-                <td>Физика лекция</td>
-                <td class="split">
-                    <div class="top">Комп. сети лекция</div>
-                    <div class="bottom">Матан лаб</div>
-                </td>
-                <td>ООП лекция</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>WEB лекция</td>
-                <td>ООП лаб</td>
-                <td></td>
-                <td>Физика п/з</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Матан лаб</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
       <section id="form" class="content-block">
         <h2>Форма</h2>
 
