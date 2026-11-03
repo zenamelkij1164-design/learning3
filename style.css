@@ -258,3 +258,27 @@ header#header {
   background-color: #0055a4;
   color: white;
 }
+
+
+/* Название рядом с логотипом, меню — справа */
+.container.header-inner {
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.header-inner .header-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-inner .site-title {
+  color: white;
+  white-space: nowrap;
+  line-height: normal;
+}
+
+.header-inner nav#menu {
+  margin-left: auto;
+}
