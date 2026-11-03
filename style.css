@@ -20,62 +20,49 @@ header#header, footer#footer {
   color: white;
 }
 
+/* ---------- ШАПКА: layout через float ---------- */
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;         /* clearfix для float-логотипа */
   padding: 15px 0;
   border: 2px solid #0055a4;
+}
+
+.header-inner .logo {
+  float: left;              /* логотип прибит к левому краю */
 }
 
 .header-inner .logo img {
   max-height: 60px;
   width: auto;
+  display: block;
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-/* Mobile First: на смартфонах меню вертикальное, шапка по левому краю */
-header .header-inner {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-header .header-content {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  width: 100%;
-}
-
-header #menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-}
-
-header #menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 0;
-  border: 1px solid white;
-  border-radius: 4px;
-  text-align: left;
+  overflow: hidden;         /* BFC: становится справа от логотипа */
 }
 
 .site-title {
+  float: left;              /* "Задание 3" — тоже слева, возле логотипа */
   font-size: 1.5em;
   font-weight: bold;
-  text-align: left;
+  line-height: 60px;        /* выравнивание по вертикали с логотипом */
+  padding-left: 15px;
 }
 
+#menu {
+  float: right;             /* меню прижато к правому краю */
+  line-height: 60px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  display: inline-block;    /* ссылки в строку */
+}
+
+/* ---------- Основной контент ---------- */
 main#main {
   padding: 30px 0;
 }
@@ -141,6 +128,7 @@ main#main {
   border-bottom: none;
 }
 
+/* ---------- Форма ---------- */
 form p {
   margin-bottom: 15px;
 }
@@ -180,73 +168,31 @@ button:hover {
   background-color: #004488;
 }
 
+/* ---------- Подвал: текст слева ---------- */
 footer#footer {
-  text-align: center;
+  text-align: left;
   padding: 15px 0;
   border: 2px solid #0055a4;
 }
 
-/* Mobile First: основной поток */
+/* ---------- Раскладка секций ---------- */
 main {
   display: flex;
   flex-direction: column;
 }
 
-/* Таблица должна быть визуально выше списка ссылок на мобильных */
-#table {
-  order: -1;
-}
+#table { order: -1; }
 
-/* Планшеты и выше (от 768px) */
 @media (min-width: 768px) {
-  /* Возвращаем шапку в горизонтальный вид как во 2-м задании */
-  header .header-inner {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  header .header-content {
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-  }
-
-  header #menu {
-    flex-direction: row;
-    gap: 20px;
-    width: auto;
-  }
-
-  header #menu a {
-    padding: 5px 10px;
-    border: none;
-    text-align: left;
-  }
-
-  .site-title {
-    text-align: left;
-  }
-
-  /* Располагаем контент в ряд */
   main {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
   }
-
-  #list, #table, #form {
-    flex: 1 1 300px;
-  }
-
-  /* Возвращаем таблицу на её законное место в потоке */
-  #table {
-    order: 0;
-  }
+  #list, #table, #form { flex: 1 1 300px; }
+  #table { order: 0; }
 }
 
-/* Десктоп: убираем боковые паддинги контейнера */
 @media (min-width: 960px) {
-  .container {
-    padding: 0;
-  }
+  .container { padding: 0; }
 }
