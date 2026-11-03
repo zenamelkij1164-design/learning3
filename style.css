@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0; /* Убираем внешние отступы */
   font-family: Arial, sans-serif;
@@ -18,24 +17,33 @@ body {
   padding: 0 15px;
 }
 
-/*** Шапка — элементы прижаты к краям ***/
+/***
+ * Шапка — элементы прижаты к краям
+ *
+ * В ВАШЕЙ разметке заголовок находится ВНУТРИ блока .logo, поэтому используем flex
+***/
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px; /* Задайте точную высоту вашей синей полосы */
-  padding-left: 20px; /* Отступ только слева, чтобы текст не прилипал к логотипу */
+  padding-right: 20px; /* Отступ справа для меню */
 }
 
-.header-inner .logo img {
+.logo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.logo img {
   max-height: 60px;
   width: auto;
-  margin-right: 15px;
 }
 
 .site-title {
   font-size: 1.5em;
-  line-height: 60px; /* Вертикальное выравнивание по логотипу */
+  line-height: normal; /* Убрал лишнюю вертикальную растяжку */
 }
 
 /*** Навигация справа ***/
@@ -45,7 +53,7 @@ nav#menu a {
   font-weight: bold;
   padding: 10px 15px;
   transition: background-color 0.2s;
-  margin-right: -3px; /* Сближаем кнопки */
+  margin-left: -3px; /* Сближаем кнопки */
   border-radius: 4px;
 }
 
@@ -53,17 +61,20 @@ nav#menu a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-/*** Синяя заливка сверху и снизу ***/
-header#header, footer#footer {
+/***
+ * Синяя заливка сверху И снизу
+ *
+ * Вверху это header#header (ваше решение).
+ * Внизу это div.container (так сделано в вашем index.html),
+ * но мы добавим ему класс footer-zone для уникальности.
+ * Это сохранит ТАКОЙ ЖЕ синий цвет, как вверху.
+***/
+footer#footer,
+.footer-zone {
   width: 100%;
   background-color: #0055a4;
   color: white;
-}
-
-/*** Подвал с текстом "Щербина Евгений" — элемент прижатый к левому краю экрана ***/
-footer#footer div {
-  float: left;
+  text-align: left;
   padding-left: 20px;
   line-height: 60px; /* Центрируем текст по вертикали */
 }
