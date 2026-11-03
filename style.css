@@ -228,3 +228,33 @@ main {
     padding: 0;
   }
 }
+
+
+/* Центральное расположение таблицы, списка и формы */
+main#main {
+  display: block;
+  width: 100%;
+  padding: 30px 15px;
+}
+
+main#main > .container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#table,
+#list,
+#form {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Верхняя заливка тем же синим цветом, что и нижняя */
+header#header {
+  width: 100%;
+  background-color: #0055a4;
+  color: white;
+}
